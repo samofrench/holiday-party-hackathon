@@ -1,1 +1,14 @@
-<h1>all sweaters</h1>
+
+<div ng-hide="isLoggedIn()">
+	<img id="splash-image" src="https://cdn.shopify.com/s/files/1/0384/0921/products/faces-ninja-turtle-faux-christmas-sweater.main.jpeg?v=1414182961" class="img-responsive">
+</div>
+
+
+<div class="container">
+	<h1>all sweaters</h1>
+	<div class="well" ng-repeat="sweater in sweaters track by $index">
+		<h1>{{sweater.title}}</h1>
+		<p>{{sweater.color}}</p>
+		<p>{{sweater.material}}</p>
+	</div>
+</div>
