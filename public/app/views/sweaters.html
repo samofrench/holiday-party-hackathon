@@ -7,11 +7,19 @@
 <div ng-show="isLoggedIn()" class="container">
 	<h1>all sweaters</h1>
 	<a href='/new' type="button" class="btn btn-default">Add A Sweater!</a>
-	<div class="well" ng-repeat="sweater in sweaters track by $index">
-		<h1>{{sweater.title}}</h1>
-		<p>{{sweater.material}}</p>
-		<p>{{sweater.color}}</p>
-	</div>
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+				<div class="well" ng-repeat="sweater in sweaters track by $index">
+					<h1>{{sweater.title}}</h1>
+					<p>{{sweater.material}}</p>
+					<p>{{sweater.color}}</p>
+					<button>See Details</button>
+				</div>
+			
+		</div>
 
-
+		<div id="sweater-focus" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			
+		</div>
+	</div>	
 </div>
