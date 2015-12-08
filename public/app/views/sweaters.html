@@ -19,7 +19,7 @@
 	<div class="row">
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 				<div class="well" ng-repeat="sweater in sweaters track by $index">
-					<h1>{{sweater.title}}</h1>
+					<h1><a ng-click="showDetails(sweater._id)">{{sweater.title}}</a></h1>
 					<p>{{sweater.material}}</p>
 					<p>{{sweater.color}}</p>
 					<button>See Details</button>
@@ -27,8 +27,14 @@
 			
 		</div>
 
-		<div id="sweater-focus" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-			
+		<div ng-show="showing" id="sweater-focus" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div>
+				<h3>{{sweeter.title}}</h3>
+				<p>Material: {{sweeter.material}}</p>
+				<p>Color: {{sweeter.color}}</p>
+				<p>Pompoms: {{sweeter.pompoms}}</p>
+				<img class="image-preview" src="{{sweeter.img}}">
+			</div>
 		</div>
 	</div>	
 </div>
