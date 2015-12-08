@@ -37,3 +37,23 @@
 	font-family: 'Mountains of Christmas', cursive;
 
 }
+
+.about {
+	color: white;
+}
+
+.img-left {
+	float: left;
+	height: 300px;
+	margin: 15px;
+}
+
+.img-right {
+	float: left;
+	height: 200px;
+	margin: 15px;
+}
+
+.deetz li {
+	font-size: 2em;
+}
