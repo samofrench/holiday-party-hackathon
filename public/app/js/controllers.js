@@ -40,6 +40,7 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 			var params = {
 				title: $scope.title,
 				material: $scope.material,
+				color: $scope.color,
 				pompoms: $scope.pompoms,
 				img: $scope.img,
 				userId: $scope.userId 
