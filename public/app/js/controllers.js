@@ -43,17 +43,10 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 	'$scope',
 	'$location',
 	'Sweater',
-	'Auth',
 
-	function($scope, $location, Sweater, Auth) {
+	function($scope, $location, Sweater) {
 		
-		var token = Auth.getToken();
-
-		if(token) {
-			var decoded = Auth.decodeJwt(token);
-		}
-
-		$scope.userName = decoded.payload.name;
+		
 
 		$scope.addSweater = function() {
 			console.log($scope.userName);
@@ -62,8 +55,7 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 				material: $scope.material,
 				color: $scope.color,
 				pompoms: $scope.pompoms,
-				img: $scope.img,
-				userName: $scope.userName 
+				img: $scope.img
 			}
 
 			var newSweater = new Sweater(params);
