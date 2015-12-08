@@ -31,7 +31,11 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 	'$scope',
 	'$location',
 	'Sweater',
-	function($scope, $location, Sweater) {
+	'Auth',
+	function($scope, $location, Sweater, Auth) {
+
+		Auth.getToken();
+
 		$scope.addSweater = function() {
 			var params = {
 				title: $scope.title,

@@ -31,13 +31,14 @@
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
 		<ul class="nav navbar-nav">
-			<li><a href="">Add A Sweater!</a></li>
-			<li><a href="">Users</a></li>
-			<li><a href="">Sign Up</a></li>
-      		<li><a href="">Login</a></li>
-      		<li><a href="">Logout</a></li>
+			<li><a href="/users" ng-show='isLoggedIn()'>Users</a></li>
+			<li><a href="/sweaters" ng-show='isLoggedIn()'>Sweaters</a></li>
+      		<li><a ng-click='logout()' ng-show='isLoggedIn()'>Logout</a></li>
+			<li><a href="/about">About</a></li>
+      		<li><a href="/login" ng-hide='isLoggedIn()'>Login</a></li>
+			<li><a href="/signup" ng-hide='isLoggedIn()'>Sign Up</a></li>
 		</ul>
-		<form class="navbar-form navbar-left" role="search">
+		<form class="navbar-form navbar-left" role="search" ng-show='isLoggedIn()'>
 			<input type="text" ng-model='search' name="q" class="form-control" placeholder="Search">
 		</form>
 	</div><!-- /.navbar-collapse -->
