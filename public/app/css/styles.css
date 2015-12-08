@@ -6,6 +6,11 @@
 	z-index: -500;
 }
 
+body {
+	background-color: #B7011F;
+	z-index: -501
+}
+
 .navbar{
 	margin: 0;
 	background-color: #3c8d0d;
