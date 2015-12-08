@@ -9,7 +9,7 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 		console.log(data);
 	});
 
-	$scope.deleteSweater = function(id, airplaneIdx) {
+	$scope.deleteSweater = function(id, sweaterIdx) {
 		Sweater.delete({id: id}, function success(data) {
 			$scope.sweaters.splice(sweaterIdx, 1);
 		}, function error(data) {
