@@ -4,8 +4,24 @@
 }
 
 #sweater-focus{
-	border: 2px solid green;
-	height: 500px;
 	position: fixed;
 	margin-left: 60%;
+	background-color: #5fafff;
+}
+
+.sweater-list{
+	color: white;
+	background-color: green;
+}
+.image-focus{
+	width: 80%;
+	max-height: 400px;
+	margin-bottom: 20px;
+}
+
+.sweater-link-list{
+	color: white;
+}
+.sweater-link-list:hover{
+	color: white;
 }

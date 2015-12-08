@@ -7,9 +7,6 @@
 			You're invited to this year's GA Ugly-Sweater Holiday Party. Login to submit your sweater, and see what sweaters other people are wearing.
 		</p>
 	</div>
-	<!-- <div class="col-md-3"></div> -->
-
-	<!-- <img id="splash-image" src="https://cdn.shopify.com/s/files/1/0384/0921/products/faces-ninja-turtle-faux-christmas-sweater.main.jpeg?v=1414182961" class="img-responsive"> -->
 </div>
 
 
@@ -18,22 +15,22 @@
 	<a href='/new' type="button" class="btn btn-default">Add A Sweater!</a>
 	<div class="row">
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-				<div class="well" ng-repeat="sweater in sweaters track by $index">
-					<h1><a ng-click="showDetails(sweater._id)">{{sweater.title}}</a></h1>
+				<div class="well sweater-list" ng-repeat="sweater in sweaters | filter:search track by $index">
+					<h1><a class="sweater-link-list" ng-click="showDetails(sweater._id)">{{sweater.title}}</a></h1>
 					<p>{{sweater.material}}</p>
 					<p>{{sweater.color}}</p>
-					<button>See Details</button>
+					<button ng-click="deleteSweater(sweater._id, $index)" class="btn btn-default">Delete</button>
 				</div>
 			
 		</div>
 
 		<div ng-show="showing" id="sweater-focus" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<div>
-				<h3>{{sweeter.title}}</h3>
-				<p>Material: {{sweeter.material}}</p>
-				<p>Color: {{sweeter.color}}</p>
-				<p>Pompoms: {{sweeter.pompoms}}</p>
-				<img class="image-preview" src="{{sweeter.img}}">
+				<h3 class="text-center">{{sweeter.title}}</h3>
+				<p class="text-center">Material: {{sweeter.material}}</p>
+				<p class="text-center">Color: {{sweeter.color}}</p>
+				<p class="text-center">Pompoms: {{sweeter.pompoms}}</p>
+				<img class="image-focus center-block" src="{{sweeter.img}}">
 			</div>
 		</div>
 	</div>	
