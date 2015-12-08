@@ -121,4 +121,4 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 			});
 		}
 
-}]);
+}]); 
