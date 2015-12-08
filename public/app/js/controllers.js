@@ -45,8 +45,7 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 	'Sweater',
 
 	function($scope, $location, Sweater) {
-		
-		
+
 
 		$scope.addSweater = function() {
 			console.log($scope.userName);
@@ -56,6 +55,7 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 				color: $scope.color,
 				pompoms: $scope.pompoms,
 				img: $scope.img
+
 			}
 
 			var newSweater = new Sweater(params);
