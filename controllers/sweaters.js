@@ -5,7 +5,6 @@ var router= express.Router();
 router.get('/', function(req, res){
 	Sweater.find(function(err, sweaters){
 		if (err) return res.send({message: "No sweater found"});
-
 		res.send(sweaters);
 	});
 });
