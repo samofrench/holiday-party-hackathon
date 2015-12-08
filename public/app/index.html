@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="app/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="app/css/sweaters.css">
 	<link rel="stylesheet" type="text/css" href="app/css/error.css">
+	<link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700' rel='stylesheet' type='text/css'>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.js"></script>
    	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
@@ -26,18 +27,18 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="/">Ugly Sweaters</a>
+		<a class="navbar-brand" href="/" id="navCustom">Ugly Sweaters</a>
 	</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
 		<ul class="nav navbar-nav">
-			<li><a href="/users" ng-show='isLoggedIn()'>Users</a></li>
-			<li><a href="/sweaters" ng-show='isLoggedIn()'>Sweaters</a></li>
-      		<li><a ng-click='logout()' ng-show='isLoggedIn()'>Logout</a></li>
-			<li><a href="/about">About</a></li>
-      		<li><a href="/login" ng-hide='isLoggedIn()'>Login</a></li>
-			<li><a href="/signup" ng-hide='isLoggedIn()'>Sign Up</a></li>
+			<li><a href="/users" ng-show='isLoggedIn()' id="navCustom">Users</a></li>
+			<li><a href="/sweaters" ng-show='isLoggedIn()' id="navCustom">Sweaters</a></li>
+      		<li><a ng-click='logout()' ng-show='isLoggedIn()' id="navCustom">Logout</a></li>
+			<li><a href="/about" id="navCustom">About</a></li>
+      		<li><a href="/login" ng-hide='isLoggedIn()' id="navCustom">Login</a></li>
+			<li><a href="/signup" ng-hide='isLoggedIn()' id="navCustom">Sign Up</a></li>
 		</ul>
 		<form class="navbar-form navbar-left" role="search" ng-show='isLoggedIn()'>
 			<input type="text" ng-model='search' name="q" class="form-control" placeholder="Search">

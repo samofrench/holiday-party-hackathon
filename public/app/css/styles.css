@@ -9,12 +9,31 @@
 
 .navbar{
 	margin: 0;
+	background-color: #3c8d0d;
 
+}
+
+#navCustom {
+	
+	color: white;
 }
 
 #splashInfo {
 	z-index: 5;
-	background-color: rgba(0,255,255,0.7);
-	margin-top: 300px;
+	background-color: rgba(210,210,210,0.8);
+	margin-top: 200px;
+	color: black;
+	box-shadow: 10px 5px 5px rgba(105,105,105,0.7);
+	border-radius: 3px;
+	padding: 20px;
+	font-size: 18px;
+}
+
+#titleHeading {
+	font-size: 36px;
+}
+
+* {
+	font-family: 'Mountains of Christmas', cursive;
 
 }
