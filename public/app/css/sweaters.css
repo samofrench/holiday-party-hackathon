@@ -1,0 +1,11 @@
+.image-preview{
+	width: 200px;
+	height: 200px;
+}
+
+#sweater-focus{
+	border: 2px solid green;
+	height: 500px;
+	position: fixed;
+	margin-left: 60%;
+}
