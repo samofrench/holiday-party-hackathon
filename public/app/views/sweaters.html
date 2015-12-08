@@ -6,9 +6,12 @@
 
 <div ng-show="isLoggedIn()" class="container">
 	<h1>all sweaters</h1>
+	<a href='/new' type="button" class="btn btn-default">Add A Sweater!</a>
 	<div class="well" ng-repeat="sweater in sweaters track by $index">
 		<h1>{{sweater.title}}</h1>
-		<p>{{sweater.color}}</p>
 		<p>{{sweater.material}}</p>
+		<p>{{sweater.color}}</p>
 	</div>
+
+
 </div>

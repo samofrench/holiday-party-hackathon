@@ -1,1 +1,24 @@
-<h1>create a new sweater</h1>
+<h1>Create an Sweater!</h1>
+
+<form role='form' ng-submit='addSweater()'>
+	<div class='form-group'>
+		<input type="text" ng-model='title' class="form-control" id="title" placeholder="Title" required>
+	</div>
+	<div class='form-group'>
+		<input type="text" ng-model='material' class="form-control" id="material" placeholder="Material" required>
+	</div>
+	<div class='form-group'>
+		<input type="number" ng-model='pompoms' class="form-control" id="pompoms" placeholder="Pompoms" required>
+	</div>
+	<div class='form-group'>
+		<input type="text" ng-model='color' class="form-control" id="color" placeholder="Color" required>
+	</div>
+	<div class='form-group'>
+		<input type="text" ng-model='img' class="form-control" id="img" placeholder="Image" required>
+	</div>
+	<div class='form-group'>
+		<input type="hidden" ng-model='userId' class="form-control" id="userId">
+	</div>
+	
+	<button type="submit" class="btn btn-primary">Add Sweater</button>
+</form>

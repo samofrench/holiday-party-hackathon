@@ -32,8 +32,6 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 	'$location',
 	'Sweater',
 	'Auth',
-	
-
 
 	function($scope, $location, Sweater, Auth) {
 		
@@ -49,6 +47,7 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 			var params = {
 				title: $scope.title,
 				material: $scope.material,
+				color: $scope.color,
 				pompoms: $scope.pompoms,
 				img: $scope.img,
 				userName: $scope.userName 
