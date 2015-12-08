@@ -40,7 +40,7 @@ angular.module('SweaterServices', ['ngResource'])
 		    }
 
 			function base64urlDecode(str) {
-			  return new Buffer(base64urlUnescape(str), 'base64').toString();
+			  return new ArrayBuffer(base64urlUnescape(str), 'base64').toString();
 			};
 
 			function base64urlUnescape(str) {

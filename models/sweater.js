@@ -6,7 +6,7 @@ var SweaterSchema = new mongoose.Schema({
   pompoms: Number,
   color: String,
   img: String,
-  userId: String
+  userName: String
 });
 
 module.exports = mongoose.model('Sweater', SweaterSchema);

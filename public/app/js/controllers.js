@@ -16,6 +16,18 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 			console.log(data);
 		});
 	}
+
+
+	$scope.showDetails = function(id){
+		console.log("function called");
+		Sweater.get({id: id}, function success(data){
+			$scope.sweeter= data;
+			$scope.showing = true;
+		}, function error(data){
+			console.log(data);
+			$scope.showing = false;
+		});
+	}
 }]).controller('ShowSweaterCtrl', [
 	'$scope',
 	'$routeParams',
@@ -38,12 +50,13 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 		var token = Auth.getToken();
 
 		if(token) {
-			var decoded = decodeJwt(token);
+			var decoded = Auth.decodeJwt(token);
 		}
 
 		$scope.userName = decoded.payload.name;
 
 		$scope.addSweater = function() {
+			console.log($scope.userName);
 			var params = {
 				title: $scope.title,
 				material: $scope.material,
