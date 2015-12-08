@@ -42,3 +42,26 @@ body {
 	font-family: 'Mountains of Christmas', cursive;
 
 }
+
+
+
+
+
+
+
+
+
+
+.btn {
+	background-color: #b7011f;
+	color: white;
+	border: 2px solid white;
+
+}
+
+.btn:hover,
+.btn:active {
+	background-color: white;
+	color: #b7011f;
+	border: 2px solid #b7011f;
+}
