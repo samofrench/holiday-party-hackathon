@@ -31,14 +31,27 @@ angular.module('SweaterCtrls', ['SweaterServices'])
 	'$scope',
 	'$location',
 	'Sweater',
-	function($scope, $location, Sweater) {
+	'Auth',
+	
+
+
+	function($scope, $location, Sweater, Auth) {
+		
+		var token = Auth.getToken();
+
+		if(token) {
+			var decoded = decodeJwt(token);
+		}
+
+		$scope.userName = decoded.payload.name;
+
 		$scope.addSweater = function() {
 			var params = {
 				title: $scope.title,
 				material: $scope.material,
 				pompoms: $scope.pompoms,
 				img: $scope.img,
-				userId: $scope.userId 
+				userName: $scope.userName 
 			}
 
 			var newSweater = new Sweater(params);
